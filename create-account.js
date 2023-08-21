@@ -29,13 +29,13 @@ account.withdraw("1234" 300);
 // "Succesfully withdrew $300. Current balance: $50."
 
 account.withdraw("1234" 10);
-// "Withdrawal amount exceeds account balance. Transaction cancelled."
+// "Withdrawal amount exceeds account balance. Transaction canceled."
 
 account.changePin("1234", "5678");
 // "PIN successfully changed!"
  */
 
-function createAccount(pin, amount=0) {// accpts pin and amount which is 0 by default
+function createAccount(pin, amount=0) {// accepts pin and amount which is 0 by default
     return{
         checkBalance(inputPin){ 
             if ( inputPin !== pin){
@@ -54,7 +54,7 @@ function createAccount(pin, amount=0) {// accpts pin and amount which is 0 by de
                 return "Invalid Pin.";
             }
             if(amount < withdrawAmount){
-                return "Withdrawal amount exceeds account balance. Transaction cancelled.";
+                return "Withdrawal amount exceeds account balance. Transaction canceled.";
             }
             amount -= withdrawAmount;
             return `Succesfully withdrew $${withdrawAmount}. Current balance: $${amount}`;
