@@ -35,7 +35,7 @@ account.changePin("1234", "5678");
 // "PIN successfully changed!"
  */
 
-function createAccount(pin, amount=0) {// accepts pin and amount which is 0 by default
+function createAccount(pin, amount=0) {      // accepts pin and amount which is 0 by default
     return{
         checkBalance(inputPin){ 
             if ( inputPin !== pin){
