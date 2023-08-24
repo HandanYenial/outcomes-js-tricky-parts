@@ -11,7 +11,9 @@ let thirdAdder = curriedAdd();
 firstAdder(); // 0
 secondAdder(1)(2)(); // 3
 thirdAdder(2)(8)(5)(1)(); // 16
+
  */
+
 function curriedAdd(total) {
     if(total === undefined) {
         return 0;
